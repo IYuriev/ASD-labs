@@ -15,13 +15,13 @@ const drawCircle = (x, y, number) => {
     ctx.beginPath();
     ctx.arc(x, y, radius, 0, 2 * Math.PI);
     ctx.strokeStyle = 'black';
-    ctx.lineWidth = 2;
+    ctx.lineWidth = 1.5;
     ctx.fillStyle = 'white';
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
 
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = 'black';
     ctx.font = '16px Arial';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -174,7 +174,7 @@ const drawLine = (start, end, drawArrow = false) => {
         ctx.save();
         ctx.translate(newEndX, newEndY);
         ctx.rotate(angle);
-        ctx.fillStyle = 'red';
+        ctx.fillStyle = 'black';
         ctx.beginPath();
         ctx.moveTo(0, 0);
         ctx.lineTo(-arrowSize, arrowSize / 2);
@@ -222,7 +222,7 @@ const drawArc = (start, end, drawArrow = false) => {
         ctx.save();
         ctx.translate(newEndX, newEndY);
         ctx.rotate(angle);
-        ctx.fillStyle = 'blue';
+        ctx.fillStyle = 'black';
         ctx.beginPath();
         ctx.moveTo(0, 0);
         ctx.lineTo(-arrowSize, arrowSize / 2);
@@ -262,7 +262,7 @@ const drawLoop = (startEl, drawArrow = false) => {
         ctx.save();
         ctx.translate(arrowX, arrowY);
         ctx.rotate(Math.atan2(controlY2 - startEl.y, controlX2 - startEl.x) + angle);
-        ctx.fillStyle = 'green';
+        ctx.fillStyle = 'black';
         ctx.beginPath();
         ctx.moveTo(0, 0);
         ctx.lineTo(-arrowSize, arrowSize / 2);
