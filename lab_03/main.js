@@ -74,7 +74,7 @@ const pseudoRandom = (seed) => {
 }
 
 const directMatrix = (myVariant) => {
-    const myVariantArray = [...String(myVariant)].map(Number);
+    const myVariantArray = [...(myVariant)].map(Number);
     const count = 10 + myVariantArray[2];
     const k = 1.0 - myVariantArray[2] * 0.02 * myVariantArray[3] * 0.005 - 0.25;
     const generator = pseudoRandom(myVariant);
@@ -90,8 +90,11 @@ const directMatrix = (myVariant) => {
     return matrix;
 };
 
-const undirectMatrix = (arr) => {
-    let undirMatrix = arr;
+
+
+
+const undirectMatrix = (matrix) => {
+    let undirMatrix = matrix;
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix[i].length; j++) {
             if (matrix[i][j] === 1) {
