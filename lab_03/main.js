@@ -94,7 +94,7 @@ const directMatrix = (myVariant) => {
 
 
 const undirectMatrix = (matrix) => {
-    let undirMatrix = matrix;
+    let undirMatrix = matrix.map(row => row.slice());
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix[i].length; j++) {
             if (matrix[i][j] === 1) {
