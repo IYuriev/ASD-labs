@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_05</title>
+    <style>
+        /* Стили для кнопок */
+        .button-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .dfs {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .dfs:hover {
+            background-color: #0056b3;
+        }
+
+        .bfs {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .bfs:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="graphCanvas" width="1700" height="488"></canvas>
+    <table id="matrix"></table>
+
+    <div class="button-container">
+        <button class="bfs" id="bfsButton">BFS</button>
+        <button class="dfs" id="dfsButton">DFS</button>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./bfs.js"></script>
+    <script type="module" src="./dfs.js"></script>
+    <script type="module" src="./drawGraph.js"></script>
+    <script type="module" src="./buttons.js"></script>
+</body>
+</html>
