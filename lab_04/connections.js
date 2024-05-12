@@ -1,5 +1,3 @@
-// fix
-
 import { matrix } from "./main.js";
 import { strongItemsArr } from "./strongConnectivity.js";
 
